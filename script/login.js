@@ -11,7 +11,7 @@ document.getElementById('btn-login')
         console.log(pin)
 
         // 3- macth mobile & pin
-        if(contactNumber === '01234567890' && pin === '1234'){
+        if(contactNumber === '01956016119' && pin === '1234'){
             // 3.1 ==> true> alart= homepage
             alert('Login Successful');
 
