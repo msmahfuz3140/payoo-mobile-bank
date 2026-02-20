@@ -54,11 +54,11 @@
         <p class="text-neutral/50">Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
 
         <div class="buttons grid grid-cols-3 gap-3">
-            <button class="btn flex-col h-full py-6 rounded-xl btn-primary btn-soft">
+            <button onclick="showOnly('add-money')" class="btn flex-col h-full py-6 rounded-xl btn-primary btn-soft">
                 <img src="./assets/opt-1.png" alt="">
                 <p>Add Money</p>
             </button>
-            <button class="btn flex-col h-full py-6 rounded-xl btn-primary btn-soft">
+            <button onclick="showOnly('cash-out')" class="btn flex-col h-full py-6 rounded-xl btn-primary btn-soft">
                 <img src="./assets/opt-2.png" alt="">
                 <p>Cashout</p>
             </button>
@@ -74,7 +74,7 @@
                 <img src="./assets/opt-5.png" alt="">
                 <p>Pay Bill</p>
             </button>
-            <button class="btn flex-col h-full py-6 rounded-xl btn-primary btn-soft">
+            <button onclick="showOnly('history')" class="btn flex-col h-full py-6 rounded-xl btn-primary btn-soft">
                 <img src="./assets/opt-6.png" alt="">
                 <p>Transactions</p>
             </button>
@@ -141,6 +141,13 @@
                     <button id="btn-cashout" class="btn btn-primary rounded-full mt-4">Withdraw Money</button>
                 </fieldset>
             </div>
+        </div>
+    </section>
+
+    <section id="history" class="w-11/12 mx-auto py-5 hidden">
+        <h2 class="text-xl font-bold mb-5">Transactions</h2>
+        <div id="history-container" class="space-y-5">
+           
         </div>
     </section>
 

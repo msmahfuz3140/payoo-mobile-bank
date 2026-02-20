@@ -30,6 +30,20 @@ document.getElementById('btn-cashout')
             // 5.1- true:: show an alert & set balance
             alert('Cashout successfull');
             setBalance(newBalance);
+
+
+             // history container ke dhore niye ashbo
+            const history = document.getElementById('history-container');
+            // new div create korbo
+            const newHistory = document.createElement('div');
+            // new div e innerHTML add korbo
+            newHistory.innerHTML = `
+            <div class="transaction-card p-5 bg-base-100">
+                Cash Out Successfull_ ${cashoutAmount} Taka, from ${cashoutNumber},to 01930612564 at ${new Date()}
+            </div>
+            `
+            // history container e new div append korbo
+            history.appendChild(newHistory)
         }
         else {
             // 5.2- false:: show an error alert & return

@@ -16,13 +16,29 @@ document.getElementById("btn-add-money")
 
         // get amount
         const amount = getValueFromInput("add-money-amount");
-        const newBalance = getBalance() + Number(amount);
+        const currentBalance = getBalance()
+        const newBalance = currentBalance + Number(amount);
         
         // verify pin
         const pin = getValueFromInput("add-money-pin");
         if(pin === '1234'){
-            alert('Add Money Successfull');
+            alert(`Add Money Successfull from ${bankAccount}
+            
+            at ${new Date()}`);
             setBalance(newBalance);
+
+            // history container ke dhore niye ashbo
+            const history = document.getElementById('history-container');
+            // new div create korbo
+            const newHistory = document.createElement('div');
+            // new div e innerHTML add korbo
+            newHistory.innerHTML = `
+            <div class="transaction-card p-5 bg-base-100">
+                Add Money Successfull_ ${amount} Taka, from ${bankAccount},account no- ${accountNumber}, at ${new Date()}
+            </div>
+            `
+            // history container e new div append korbo
+            history.appendChild(newHistory)
         }
         else{
             alert('Invalid Pin');
