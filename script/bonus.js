@@ -21,7 +21,7 @@ document.getElementById("btn-bonus")
         const newHistory = document.createElement('div');
         // new div e innerHTML add korbo
         newHistory.innerHTML = `
-            <div class="transaction-card p-5 bg-base-100 rounded-lg text-red-500 border-2 border-gray-300 shadow-xl">
+            <div class="transaction-card p-5 bg-base-100 rounded-lg text-purple-500 border-2 border-gray-300 shadow-xl">
                 Receve Bonus Successfull_ ${bonus} Taka, from Sonar Bank, at ${new Date()}
             </div>
             `

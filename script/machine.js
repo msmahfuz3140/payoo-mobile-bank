@@ -31,6 +31,7 @@ function showOnly(id){
     const history = document.getElementById('history');
     const transfer = document.getElementById('TransferMoney');
     const bonus = document.getElementById('getBonus');
+    const bill = document.getElementById('pay-bill');
     // console.log(`add money ${addMoney}, cashout ${cashOut}`)
 
     // sobai ke hide kore daw
@@ -39,6 +40,7 @@ function showOnly(id){
     history.classList.add('hidden')
     transfer.classList.add('hidden')
     bonus.classList.add('hidden')
+    bill.classList.add('hidden')
 
     // id wala element take show kro
     const selected = document.getElementById(id);

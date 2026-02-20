@@ -28,7 +28,7 @@ document.getElementById('btn-cashout')
 
         if (pin === '1234') {
             // 5.1- true:: show an alert & set balance
-            alert('Cashout successfull');
+            alert(`Cashout successfull ${cashoutAmount} Taka at ${new Date()}`);
             setBalance(newBalance);
 
 
@@ -38,7 +38,7 @@ document.getElementById('btn-cashout')
             const newHistory = document.createElement('div');
             // new div e innerHTML add korbo
             newHistory.innerHTML = `
-            <div class="transaction-card p-5 bg-base-100">
+            <div class="transaction-card p-5 bg-base-100 rounded-lg text-blue-400 border-2 border-gray-300 shadow-xl">
                 Cash Out Successfull_ ${cashoutAmount} Taka, from ${cashoutNumber},to 01930612564 at ${new Date()}
             </div>
             `

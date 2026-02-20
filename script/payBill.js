@@ -1,29 +1,29 @@
-document.getElementById("btn-add-money")
+document.getElementById("btn-pay-bill")
     .addEventListener('click', function () {
         // get bank account
-        const bankAccount = getValueFromInput("add-money-bank");
+        const bankAccount = getValueFromInput("pay-bill-bank");
         if (bankAccount === 'Select Bank') {
             alert('Pleasle Select a Bank');
             return;
         }
 
         // get account number
-        const accountNumber = getValueFromInput("add-money-number");
+        const accountNumber = getValueFromInput("pay-bill-number");
         if (accountNumber.length !== 11) {
             alert('Invalid account Number');
             return;
         }
 
         // get amount
-        const amount = getValueFromInput("add-money-amount");
+        const amount = getValueFromInput("pay-bill-amount");
         const currentBalance = getBalance()
-        const newBalance = currentBalance + Number(amount);
+        const newBalance = currentBalance - Number(amount);
         
         // verify pin
-        const pin = getValueFromInput("add-money-pin");
+        const pin = getValueFromInput("pay-bill-pin");
         if(pin === '1234'){
-            alert(`Add Money Successfull ,${amount} Taka
-            from ${bankAccount},  
+            alert(`Pay Bill Successfull from ${bankAccount}, ${amount} Taka
+            
             at ${new Date()}`);
             setBalance(newBalance);
 
@@ -33,8 +33,8 @@ document.getElementById("btn-add-money")
             const newHistory = document.createElement('div');
             // new div e innerHTML add korbo
             newHistory.innerHTML = `
-            <div class="transaction-card p-5 bg-base-100 rounded-lg text-green-500 border-2 border-gray-300 shadow-xl">
-                Add Money Successfull_ ${amount} Taka, from ${bankAccount},account no- ${accountNumber}, at ${new Date()}
+            <div class="transaction-card p-5 bg-base-100 rounded-lg text-orange-500-500 border-2 border-gray-300 shadow-xl">
+               Bill Pay Successfull_ ${amount} Taka, from ${bankAccount},account no- ${accountNumber}, at ${new Date()}
             </div>
             `
             // history container e new div append korbo
