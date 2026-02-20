@@ -29,12 +29,14 @@ function showOnly(id){
     const addMoney = document.getElementById('add-money');
     const cashOut = document.getElementById('cash-out');
     const history = document.getElementById('history');
+    const transfer = document.getElementById('TransferMoney');
     // console.log(`add money ${addMoney}, cashout ${cashOut}`)
 
     // sobai ke hide kore daw
     addMoney.classList.add('hidden')
     cashOut.classList.add('hidden')
     history.classList.add('hidden')
+    transfer.classList.add('hidden')
 
     // id wala element take show kro
     const selected = document.getElementById(id);
